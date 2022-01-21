@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-//import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -19,15 +18,12 @@ public class Livro {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String titulo;
+	private String editora;
 	private String isbn;
 	@Column(name = "ano_publicacao")
 	private int anoPublicacao;
 	private String autor;
-	
-	//@ManyToOne
-	//private Editora editora;
-	
-
+		
 	
 	@Deprecated
 	protected Livro() {
@@ -78,7 +74,13 @@ public class Livro {
 		this.autor = autor;
 	}
 
-	
+	public String getEditora() {
+		return editora;
+	}
+
+	public void setEditora(String editora) {
+		this.editora = editora;
+	}
 
 	@Override
 	public int hashCode() {
@@ -99,9 +101,13 @@ public class Livro {
 
 	@Override
 	public String toString() {
-		return "Livro [id=" + id + ", isbn=" + isbn + ", titulo=" + titulo + ", anoPublicacao=" + anoPublicacao
-				+ ", autor=" + autor + "]";
+		return "Livro [id=" + id + ", titulo=" + titulo + ", editora=" + editora + ", isbn=" + isbn + ", anoPublicacao="
+				+ anoPublicacao + ", autor=" + autor + "]";
 	}
+
+	
+
+
 
 	
 	

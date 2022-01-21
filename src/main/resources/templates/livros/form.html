@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="UTF-8">
-<title>Sistema de Gerenciamento de Biblioteca</title>
 
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-	crossorigin="anonymous">
+<head>
+	<meta charset="UTF-8">
+	<title>Sistema de Gerenciamento de Biblioteca</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
+
 <body>
 	<div class="container my-2">
 		<h1>Sistema de Gerenciamento de Biblioteca</h1>
 		<hr>
-		<h2>Adicionar Livro</h2>
+		<h2>Editar Livro</h2>
 		<form action="#" th:action="@{/livros/salvar}" th:object="${livro}" method="POST">
 			<input type="hidden" id="id" th:field="*{id}">
-			<input type="text" th:field="*{titulo}" placeholder="Título" class="form-control mb-4 col-4">
-      		<input type="text" th:field="*{autor}" placeholder="Autor(es)" class="form-control mb-4 col-4">
-      		<input type="text" th:field="*{anoPublicacao}" placeholder="Ano de Publicacao" class="form-control mb-4 col-4">
-		
+			<input type="text" th:field="*{titulo}" placeholder="Título" class="form-control mb-5 col-5">
+			<input type="text" th:field="*{autor}" placeholder="Autor(es)" class="form-control mb-5 col-5">
+			<input type="text" th:field="*{editora}" placeholder="Editora" class="form-control mb-5 col-5">
+			<input type="text" th:field="*{isbn}" placeholder="ISBN/ISSN" class="form-control mb-5 col-5">
+			<input type="text" th:field="*{anoPublicacao}" placeholder="Ano de Publicacao"
+				class="form-control mb-5 col-5">
+
 
 			<button type="submit" class="btn btn-info col-2">Salvar</button>
 		</form>
@@ -27,4 +30,5 @@
 		<a th:href="@{/livros}">Voltar</a>
 	</div>
 </body>
-</html> 
+
+</html>
