@@ -1,4 +1,4 @@
-package com.biblioteca.controller;
+package com.biblioteca.controle;
 
 import java.util.Optional;
 
@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
 
 import com.biblioteca.modelo.Livro;
 import com.biblioteca.repositorio.LivroRepositorio;
@@ -21,43 +22,43 @@ public class LivroController {
 		this.livroRepo = livroRepo;
 	}
 
-	@GetMapping("/livros")
+	@GetMapping("/gerenciar/livros")
 	public String livros(Model model) {
 		model.addAttribute("listaLivros", livroRepo.findAll());
-		return "/livros/livros";
+		return "/gerenciar/livros/livros";
 	}
 
-	@GetMapping("/livros/novo")
+	@GetMapping("/gerenciar/livros/novo")
 	public String novoLivro(@ModelAttribute("livro") Livro livro) {
-		return "/livros/form";
+		return "/gerenciar/livros/form";
 	}
 
-	@PostMapping("/livros/salvar")
+	@PostMapping("/gerenciar/livros/salvar")
 	public String salvarlivro(@ModelAttribute("livro") Livro livro) {
 		livroRepo.save(livro);
-		return "redirect:/livros";
+		return "redirect:/gerenciar/livros";
 	}
 
-	@GetMapping("/livros/{id}")
-	public String alterarPessoa(@PathVariable("id") long id, Model model) {
+	@GetMapping("/gerenciar/livros/{id}")
+	public String alterarLivro(@PathVariable("id") long id, Model model) {
 		Optional<Livro> livroOpt = livroRepo.findById(id);
 		if (livroOpt.isEmpty()) {
 			throw new IllegalArgumentException("Livro não existe!");
 		}
 
 		model.addAttribute("livro", livroOpt.get());
-		return "/livros/form";
+		return "/gerenciar/livros/form";
 	}
 
-	@GetMapping("/livros/excluir/{id}")
-	public String excluirPessoa(@PathVariable("id") long id) {
+	@GetMapping("/gerenciar/livros/excluir/{id}")
+	public String excluirLivro(@PathVariable("id") long id) {
 		Optional<Livro> livroOpt = livroRepo.findById(id);
 		if (livroOpt.isEmpty()) {
 			throw new IllegalArgumentException("Livro não existe!.");
 		}
 
 		livroRepo.delete(livroOpt.get());
-		return "redirect:/livros";
+		return "redirect:/gerenciar/livros";
 
 	}
 }

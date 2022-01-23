@@ -13,21 +13,20 @@
 	<div class="container my-2">
 		<h1>Sistema de Gerenciamento de Biblioteca</h1>
 		<hr>
-		<h2>Editar Livro</h2>
-		<form action="#" th:action="@{/livros/salvar}" th:object="${livro}" method="POST">
+		<h2>Editar reserva</h2>
+		<form action="#" th:action="@{/gerenciar/reservas/salvar}" th:object="${reserva}" method="POST">
 			<input type="hidden" id="id" th:field="*{id}">
-			<input type="text" th:field="*{titulo}" placeholder="Título" class="form-control mb-5 col-5">
-			<input type="text" th:field="*{autor}" placeholder="Autor(es)" class="form-control mb-5 col-5">
-			<input type="text" th:field="*{editora}" placeholder="Editora" class="form-control mb-5 col-5">
-			<input type="text" th:field="*{isbn}" placeholder="ISBN/ISSN" class="form-control mb-5 col-5">
-			<input type="text" th:field="*{anoPublicacao}" placeholder="Ano de Publicacao"
+			<input type="text" th:field="*{usuario}" placeholder="Usuário" class="form-control mb-5 col-5">
+			<input type="text" th:field="*{livro}" placeholder="Livro" class="form-control mb-5 col-5">
+			<input type="date" th:field="*{dataReserva}" placeholder="Data de Reserva"" class="form-control mb-5 col-5">
+			
 				class="form-control mb-5 col-5">
 
 
 			<button type="submit" class="btn btn-info col-2">Salvar</button>
 		</form>
 		<hr>
-		<a th:href="@{/livros}">Voltar</a>
+		<a th:href="@{gerenciar/reservas}">Voltar</a>
 	</div>
 </body>
 

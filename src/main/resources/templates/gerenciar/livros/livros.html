@@ -11,6 +11,7 @@
 </head>
 
 <body>
+<sec:ifAnyGranted roles="ROLE_ADMIN">
 	<div class="container my-2">
 
 		<h1>Livros</h1>
@@ -33,13 +34,14 @@
 					<td th:text="${livro.isbn}"></td>
 					<td th:text="${livro.anoPublicacao}"></td>
 					<td>
-						<a th:href="@{/livros/{id}(id=${livro.id})}" class="btn btn-primary">Alterar</a>
-						<a th:href="@{/livros/excluir/{id}(id=${livro.id})}" class="btn btn-danger">Excluir</a>
+						<a th:href="@{/gerenciar/livros/{id}(id=${livro.id})}" class="btn btn-primary">Alterar</a>
+					    
+						<a th:href="@{/gerenciar/livros/excluir/{id}(id=${livro.id})}" class="btn btn-danger">Excluir</a>
 					</td>
 				</tr>
 			</tbody>
 		</table>
-		<a th:href="@{/livros/novo}" class="btn btn-success ml-auto">Incluir Livro</a>
+		<a th:href="@{gerenciar/livros/novo}" class="btn btn-success ml-auto">Incluir Livro</a>
 	</div>
 </body>
 
