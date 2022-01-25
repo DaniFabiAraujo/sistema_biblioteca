@@ -50,7 +50,7 @@ public class UsuarioControle {
 	@GetMapping("/gerenciar/usuarios")
 	public String usuarios(Model model) {
 		model.addAttribute("listaUsuarios", usuarioRepo.findAll());
-		return "adm/usuarios/index";
+		return "gerenciar/usuarios/index";
 	}
 	
 	@GetMapping("/gerenciar/usuarios/novo")
@@ -89,7 +89,7 @@ public class UsuarioControle {
 		}
 		
 		usuarioRepo.delete(usuarioOpt.get());
-		return "redirect:/adm/usuarios";
+		return "redirect:/gerenciar/usuarios";
 	}
 	
 	@GetMapping("/gerenciar/usuarios/alterar/role/{id}")
@@ -104,7 +104,7 @@ public class UsuarioControle {
 		model.addAttribute("roleUsuarioForm", roleUsuarioForm);
 		model.addAttribute("roles", roles);
 		
-		return "adm/usuarios/alterar_role";
+		return "gerenciar/usuarios/alterar_role";
 	}
 	
 	@PostMapping("/gerenciar/usuarios/alterar/role")

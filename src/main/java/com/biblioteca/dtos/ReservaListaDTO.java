@@ -5,13 +5,12 @@ public class ReservaListaDTO {
 		private Long id;
 		private String usuario;
 		private String livro;
-		private String date;
-		public ReservaListaDTO(Long id, String usuario, String livro, String date) {
+		public ReservaListaDTO(Long id, String usuario, String livro) {
 			
 			this.id = id;
 			this.usuario = usuario;
 			this.livro = livro;
-			this.date = date;
+		
 		}
 		public Long getId() {
 			return id;
@@ -31,12 +30,7 @@ public class ReservaListaDTO {
 		public void setLivro(String livro) {
 			this.livro = livro;
 		}
-		public String getDate() {
-			return date;
-		}
-		public void setDate(String date) {
-			this.date = date;
-		}
+		
 		
 		
 	    

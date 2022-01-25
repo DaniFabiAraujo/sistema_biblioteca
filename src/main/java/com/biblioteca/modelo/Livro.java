@@ -1,5 +1,6 @@
 package com.biblioteca.modelo;
 
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Column;
@@ -7,12 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-
+import javax.persistence.OneToMany;
 
 
 @Entity
-@Table(name = "livros")
 public class Livro {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,11 +22,13 @@ public class Livro {
 	@Column(name = "ano_publicacao")
 	private int anoPublicacao;
 	private String autor;
-		
-	
+
+	@OneToMany(mappedBy = "livro")
+	private List<Reserva> reservas;
+
 	@Deprecated
 	protected Livro() {
-		
+
 	}
 
 	public Livro(String titulo) {
@@ -82,6 +83,14 @@ public class Livro {
 		this.editora = editora;
 	}
 
+	public List<Reserva> getReserva() {
+		return reservas;
+	}
+
+	public void setReserva(List<Reserva> reserva) {
+		this.reservas = reserva;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -104,14 +113,5 @@ public class Livro {
 		return "Livro [id=" + id + ", titulo=" + titulo + ", editora=" + editora + ", isbn=" + isbn + ", anoPublicacao="
 				+ anoPublicacao + ", autor=" + autor + "]";
 	}
-
-	
-
-
-
-	
-	
-	
-
 
 }
