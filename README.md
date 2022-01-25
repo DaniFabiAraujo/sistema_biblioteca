@@ -44,7 +44,7 @@ git clone https://github.com/DaniFabiAraujo/sistema_biblioteca
 - Altere o diretório de trabalho atual para o local desejado.
 - Digite git clone e cole a URL que você copiou anteriormente.
 - $ git clone https://github.com/DaniFabiAraujo/sistema_biblioteca
--Pressione Enter para criar seu clone local.
+- Pressione Enter para criar seu clone local.
 
 ## 3° Passo - Inicializando o projeto
 Abra a IDE e escolha o local (workspace) do projeto.
