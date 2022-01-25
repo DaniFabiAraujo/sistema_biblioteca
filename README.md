@@ -10,9 +10,9 @@ A aplicação deverá permitir que usuários acessem o sistema através de uma p
 1° passo - Instalando o Spring Tool Suite
 O Spring Tool Suite (STS) é uma IDE baseada em Eclipse. Existem versões do STS para Linux, Mac e Windows. Você pode baixar em: http://spring.io/tools/sts/all.
 Esse não é um pré-requisito para rodar projetos Spring Boot, pois é possível utilizar qualquer IDE que dê suporte ao Maven. 
--Inclusive um site interessante para aqueles que forem utilizar outras IDEs é o http://start.spring.io. 
--Ele ajuda na criação de um novo projeto Spring Boot quase que da mesma forma que o STS. 
--Para criar um projeto no STS, basta criar um new project, digitar um nome para o grupo e adicionar as dependências utilizadas nesse projeto, listadas abaixo:
+- Inclusive um site interessante para aqueles que forem utilizar outras IDEs é o http://start.spring.io. 
+- Ele ajuda na criação de um novo projeto Spring Boot quase que da mesma forma que o STS. 
+- Para criar um projeto no STS, basta criar um new project, digitar um nome para o grupo e adicionar as dependências utilizadas nesse projeto, listadas abaixo:
 
 # Tecnologias utilizadas no Projeto
 ## Back end
@@ -27,12 +27,12 @@ Esse não é um pré-requisito para rodar projetos Spring Boot, pois é possíve
 ## Front end
 - HTML - Thymeleaf Framework
 
-###Estilização via CDN
+### Estilização via CDN
 - Estilização: CSS , Bootstrap 
 
 ## Configurando O Spring Initializr 
 Se por acaso, for utilizar outra IDE que não seja o STS, deve adicionar as dependencias (Botão ADD DEPENDENCIES) 
--listadas acima e gerar um arquivo .zip (Botão GENERATE). 
+- listadas acima e gerar um arquivo .zip (Botão GENERATE). 
 
 ![Adicionando um projeto Spring Initializr](https://github.com/DaniFabiAraujo/Assets/blob/main/initialzr.png) 
 
