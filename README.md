@@ -40,10 +40,10 @@ Se por acaso, for utilizar outra IDE que não seja o STS, deve adicionar as depe
 
 ## 2° Passo - Clonando o repositório
 git clone https://github.com/DaniFabiAraujo/sistema_biblioteca
--Abra Git Bash.
--Altere o diretório de trabalho atual para o local desejado.
--Digite git clone e cole a URL que você copiou anteriormente.
--$ git clone https://github.com/DaniFabiAraujo/sistema_biblioteca
+- Abra Git Bash.
+- Altere o diretório de trabalho atual para o local desejado.
+- Digite git clone e cole a URL que você copiou anteriormente.
+- $ git clone https://github.com/DaniFabiAraujo/sistema_biblioteca
 -Pressione Enter para criar seu clone local.
 
 ## 3° Passo - Inicializando o projeto
