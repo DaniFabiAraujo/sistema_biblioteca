@@ -10,9 +10,8 @@ A aplicação deverá permitir que usuários acessem o sistema através de uma p
 1° passo - Instalando o Spring Tool Suite
 O Spring Tool Suite (STS) é uma IDE baseada em Eclipse. Existem versões do STS para Linux, Mac e Windows. Você pode baixar em: http://spring.io/tools/sts/all.
 Esse não é um pré-requisito para rodar projetos Spring Boot, pois é possível utilizar qualquer IDE que dê suporte ao Maven. 
-- Inclusive um site interessante para aqueles que forem utilizar outras IDEs é o http://start.spring.io. 
-- Ele ajuda na criação de um novo projeto Spring Boot quase que da mesma forma que o STS. 
-- Para criar um projeto no STS, basta criar um new project, digitar um nome para o grupo e adicionar as dependências utilizadas nesse projeto, listadas abaixo:
+- Inclusive um site interessante para aqueles que forem utilizar outras IDEs é o http://start.spring.io. Ele ajuda na criação de um novo projeto Spring Boot quase que da mesma forma que o STS. 
+- Para criar um projeto no Spring Tool Suite (STS), basta criar um new project, digitar um nome para o grupo e adicionar as dependências utilizadas nesse projeto, listadas abaixo:
 
 # Tecnologias utilizadas no Projeto
 ## Back end
@@ -47,7 +46,7 @@ git clone https://github.com/DaniFabiAraujo/sistema_biblioteca
 -$ git clone https://github.com/DaniFabiAraujo/sistema_biblioteca
 -Pressione Enter para criar seu clone local.
 
-## 3° Passo - inicializando o projeto
+## 3° Passo - Inicializando o projeto
 Abra a IDE e escolha o local (workspace) do projeto.
 
 ![Selecionandp o projeto](https://github.com/DaniFabiAraujo/Assets/blob/main/select-workspace.png) 
