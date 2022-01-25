@@ -48,7 +48,7 @@ Após concluir a importação, abra a classe main e execute o projeto. conforme 
 
 ![Executando a aplicação](https://github.com/DaniFabiAraujo/Assets/blob/main/run-application.png)
 
-### obs: Na Classe PopulaBD estão dispostos os inserts necessários para acesso ao Sistema. Sempre que o programa é executado, essa classe é chamada para popular o banco. Portanto, depois que rodar a primeira vez e achar necessário pode comentar o código (para evitar erro de duplicação de chaves no banco). Mas se tiver o acesso ao MSQL Workbench é só apagar as tabelas e executar normalmente. Nessa classe também é possível visualizar as credenciais de login de usuarios para acesso ao sistema. Imagem Abaixo:
+Obs: Na Classe PopulaBD estão dispostos os inserts necessários para acesso ao Sistema. Sempre que o programa é executado, essa classe é chamada para popular o banco. Portanto, depois que rodar a primeira vez e achar necessário pode comentar o código (para evitar erro de duplicação de chaves no banco). Mas se tiver o acesso ao MSQL Workbench é só apagar as tabelas e executar normalmente. Nessa classe também é possível visualizar as credenciais de login de usuarios para acesso ao sistema. Imagem Abaixo:
 
 ![Credenciais Usuários na classe PopulaBD](https://github.com/DaniFabiAraujo/Assets/blob/main/user-credencials.png)
 
