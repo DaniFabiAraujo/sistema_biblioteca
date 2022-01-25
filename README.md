@@ -36,22 +36,30 @@ $ git clone https://github.com/DaniFabiAraujo/sistema_biblioteca
 
 ## 3° Passo - inicializando o projeto
 Abra a IDE e escolha o local (workspace) do projeto.
+
 ![Selecionandp o projeto](https://github.com/DaniFabiAraujo/Assets/blob/main/select-workspace.png) 
 
 Escolha a opção de Import projects> Maven > Existing Maven Projects
+
 ![Impotando Projeto](https://github.com/DaniFabiAraujo/Assets/blob/main/import_maven_project.png)
 Marque o arquivo pom.xml no checbox.
+
 Após concluir a importação, abra a classe main e execute o projeto. conforme imagem abaixo:
+
 ![Executando a aplicação](https://github.com/DaniFabiAraujo/Assets/blob/main/run-application.png)
 
 ### obs: Na Classe PopulaBD estão dispostos os inserts necessários para acesso ao Sistema. Sempre que o programa é executado, essa classe é chamada para popular o banco. Portanto, depois que rodar a primeira vez e achar necessário pode comentar o código (para evitar erro de duplicação de chaves no banco). Mas se tiver o acesso ao MSQL Workbench é só apagar as tabelas e executar normalmente. Nessa classe também é possível visualizar as credenciais de login de usuarios para acesso ao sistema. Imagem Abaixo:
+
 ![Credenciais Usuários na classe PopulaBD](https://github.com/DaniFabiAraujo/Assets/blob/main/user-credencials.png)
 
-Após concluir a build, acesse o endereço LOCALHOST:8080, no Browser: 
+Após concluir a build, acesse o endereço LOCALHOST:8080, no Browser:
+
 ![acessando a aplicação Web ](https://github.com/DaniFabiAraujo/Assets/blob/main/localhost.png)
 ## Back end
+
 Pré-requisitos: Java 11
-Banco de dados utilizado: MYSQL
+Banco de dados utilizado: MYSQL 
+SGBD: MYSQL WORKBENCH
 
 
 # Autor
