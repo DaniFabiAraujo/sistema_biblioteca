@@ -69,9 +69,10 @@ Após concluir a build, acesse o endereço LOCALHOST:8080, no Browser:
 ![acessando a aplicação Web ](https://github.com/DaniFabiAraujo/Assets/blob/main/localhost.png)
 ## Back end
 
-Pré-requisitos: Java 11
-Banco de dados utilizado: MYSQL 
-SGBD: MYSQL WORKBENCH
+Pré-requisitos: 
+- Java 11
+- Banco de dados utilizado: MYSQL 
+- SGBD: MYSQL WORKBENCH
 
 
 # Autor
