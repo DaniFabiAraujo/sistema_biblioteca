@@ -28,11 +28,15 @@
 					<td th:text="${usuario.role}"></td>
 					<td>
 						<a th:href="@{/gerenciar/usuarios/alterar/role/{id}(id=${usuario.id})}" class="btn btn-primary">Alterar Papel</a>
-						<a th:href="@{/gerenciar/usuarios/excluir/{id}(id=${usuario.id})}" class="btn btn-danger">Excluir</a>			
+						<a th:onclick="eliminarUsuario([[${usuario.id}]])"  class="btn btn-danger">Excluir</a>			
 					</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="/funcoes.js"></script>
 </body>
 </html>

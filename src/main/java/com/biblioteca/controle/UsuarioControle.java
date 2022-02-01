@@ -62,6 +62,14 @@ public class UsuarioControle {
 		return "gerenciar/usuarios/novo";
 	}
 	
+	@GetMapping("/gerenciar/usuarios/cadastro_user")
+	public String CadastrarUsuario(Model model) {
+		
+		model.addAttribute("usuario", new Usuario("", ""));
+		model.addAttribute("roles", usuarioRepo.findByUsername("USER"));
+		return  "/gerenciar/usuarios/novo";
+	}
+	
 	@PostMapping("/gerenciar/usuarios/salvar")
 	public String salvarUsuario(@Valid @ModelAttribute("usuario") Usuario usuario, BindingResult bindingResult, Model model) {
 		

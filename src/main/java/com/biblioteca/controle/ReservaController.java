@@ -18,41 +18,43 @@ import com.biblioteca.repositorio.ReservaRepositorio;
 public class ReservaController {
 
 	private ReservaRepositorio reservaRepo;
-
+	
+   
 	public ReservaController(ReservaRepositorio reservaRepo) {
 		this.reservaRepo = reservaRepo;
 	}
-//
-//	@GetMapping("/gerenciar/reservas")
-//	public String reservas(Model model) {
-//		model.addAttribute("listaLivros", reservaRepo.findAll());
-//		return "/gerenciar/reservas/reservas";
-//	}
+
+	@GetMapping("/gerenciar/reservas")
+	public String reservas(Model model) {
+		model.addAttribute("listaReservas", reservaRepo.findAll());
+		return "/gerenciar/reservas/reservas";
+	}
 
 	@GetMapping("/gerenciar/reservas/novo")
 	public String novaReserva(@ModelAttribute("reserva") Reserva reserva) {
-		return "/gerenciar/reservas/form";
+		return "/gerenciar/reservas/details";
 	}
+	
 
-	@PostMapping("/gerenciar/reserva/salvar")
-	public String salvarreserva(@ModelAttribute("reserva") Reserva reserva) {
+	@PostMapping("/gerenciar/reservas/salvar")
+	public String salvarReserva(@ModelAttribute("reserva") Reserva reserva) {
 		reservaRepo.save(reserva);
 		return "redirect:/gerenciar/reservas";
 	}
 
 	@GetMapping("/gerenciar/reservas/{id}")
-	public String alterarLivro(@PathVariable("id") long id, Model model) {
+	public String alterarReserva(@PathVariable("id") long id, Model model) {
 		Optional<Reserva> reservaOpt = reservaRepo.findById(id);
 		if (reservaOpt.isEmpty()) {
 			throw new IllegalArgumentException("Reserva não existe!");
 		}
 
 		model.addAttribute("reserva", reservaOpt.get());
-		return "/gerenciar/reservas/form";
+		return "/gerenciar/reservas/details";
 	}
 
 	@GetMapping("/gerenciar/reservas/excluir/{id}")
-	public String excluirLivro(@PathVariable("id") long id) {
+	public String excluirReserva(@PathVariable("id") long id) {
 		Optional<Reserva> reservaOpt = reservaRepo.findById(id);
 		if (reservaOpt.isEmpty()) {
 			throw new IllegalArgumentException("Reserva não existe!.");

@@ -29,7 +29,7 @@ public class Reserva {
 	@JoinColumn(name = "livro_id", nullable = false, insertable = true, updatable = true)
 	private Livro livro;
 
-	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	@DateTimeFormat(pattern = "dd/mm/yyyy")
 	private LocalDate dataReserva;
 	
 	
@@ -42,10 +42,14 @@ public class Reserva {
 		this.dataReserva = dataReserva;
 	}
 
-	public Reserva() {
+	public Reserva(String usuario, String livro) {
 		
 	}
 	
+
+	public Reserva() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public Long getId() {
 		return id;

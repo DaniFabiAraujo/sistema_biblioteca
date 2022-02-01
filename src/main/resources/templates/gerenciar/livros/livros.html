@@ -36,15 +36,19 @@
 					<td>
 						<a th:href="@{/gerenciar/livros/{id}(id=${livro.id})}" class="btn btn-primary">Alterar</a>
 					    
-						<a th:href="@{/gerenciar/livros/excluir/{id}(id=${livro.id})}" class="btn btn-danger">Excluir</a>
+						<a th:onclick="eliminarLivro([[${livro.id}]])"  class="btn btn-danger">Excluir</a>
 					</td>
 				</tr>
 			</tbody>
 		</table>
-		<a th:href="@{gerenciar/livros/novo}" class="btn btn-success ml-auto">Incluir Livro</a>
+		<a th:href="@{/gerenciar/livros/novo}" class="btn btn-success ml-auto">Incluir Livro</a>
 		<hr>
 		<a th:href="@{/home}">Voltar</a>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="/funcoes.js"></script>
 </body>
 
 </html>
